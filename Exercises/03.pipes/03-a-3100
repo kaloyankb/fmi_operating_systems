@@ -1,0 +1,4 @@
+cut /etc/passwd -d ':' -f 5 | cut -d ',' -f 1 | tail +35 > ~/users.txt
+
+
+Запазете само потребителските имена от /etc/passwd във файл users във вашата home директория.
