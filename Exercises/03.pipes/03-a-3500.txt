@@ -1,0 +1,5 @@
+cut /etc/passwd -d ':' -f 5 | cut -d ',' -f 1 | tail +35 | tr а-я А-Я
+
+# note: problem with the cyrillic symbols
+
+Изпишете всички usernames от /etc/passwd с главни букви.
