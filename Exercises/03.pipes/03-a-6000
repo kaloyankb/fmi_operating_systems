@@ -8,8 +8,18 @@ awk 'NF>4{print}' empCopy.data
 awk '$3 > 4{print}' empCopy.data
 awk '{print NF}' empCopy.data
 awk '$1 ~ /Beth/ {print}'  empCopy.data
-
-
+awk 'BEGIN{a = 0}{if ($3 > a) { a = $3; line = $0 } } END{print line}' empCopy.data
+или
+awk -v val=$(awk 'BEGIN{a = 0}{if ($3 > a) { a = $3 } } END{print a}' empCopy.data) '$3 == val' empCopy.data
+awk 'NF'>0' empCopy.data
+awk 'length>17{print}' empCopy.data
+awk '{printf "%-5s %s\n", NF, $0}' empCopy.data
+awk '{print $2, $1}' empCopy.data
+awk '{print $2, $1, $3}' empCopy.data
+awk '{print NR, $2, $3}' empCopy.data
+awk '{s = "" ;for(i = 3; i <=NF; i++) s=s $i " ";print $1, s}' empCopy.data
+awk '{print $2 + $3}' empCopy.data
+awk 'BEGIN{value = 0}{value = value + $2 + $3}END{print value}' empCopy.data
 
 
 Копирайте <РЕПО>/exercises/data/emp.data във вашата home директория.
