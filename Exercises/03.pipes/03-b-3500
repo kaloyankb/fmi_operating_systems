@@ -1,0 +1,5 @@
+Под въпрос:
+find  -type f -exec grep -Iq /bin {} \; -print
+
+
+Колко файлове в /bin са 'shell script'-oве? (Колко файлове в дадена директория са ASCII text?)
