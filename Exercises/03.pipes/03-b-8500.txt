@@ -1,0 +1,4 @@
+awk -F ':' '{if($1=="students")printf "Hello, %s - I am here\n", $1; else printf "Hello, %s\n", $1; }' /etc/group | uniq
+
+
+За всяка група от /etc/group изпишете "Hello, <група>", като ако това е вашата група, напишете "Hello, <група> - I am here!".
