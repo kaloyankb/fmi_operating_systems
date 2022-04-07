@@ -1,0 +1,4 @@
+cat file3 | tr -d 1
+
+
+Във file3 (inplace) изтрийте всички "1"-ци.
