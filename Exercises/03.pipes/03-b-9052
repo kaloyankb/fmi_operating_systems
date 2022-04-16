@@ -1,0 +1,4 @@
+cat cpyFile9050 | egrep '([^,]*){1}Bulgaria,*' | awk -F ',' 'BEGIN{bp = $4;year = $3}{if($4 > bp) bp = $4; year = $3 }END{print year}'
+
+
+Използвайки файл population.csv, намерете през коя година в България има най-много население.
