@@ -1,0 +1,4 @@
+ls | egrep 'Beatles|Pink -' |  wc -l
+
+
+Да се преброят/изведат само песните на Beatles и Pink.
