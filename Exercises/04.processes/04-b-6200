@@ -1,0 +1,6 @@
+ps -eo user | sort | uniq | egrep "$(cat /etc/passwd | 
+awk -F ':' '{print $1}' | sort | uniq | egrep -v "$(who | awk '{print $1}' | sort | uniq | tr '\n' '|' |
+sed -r 's/^/(/g' | sed -r 's/.$/)/g')" | tr '\n' '|' | sed -r 's/^/(/g' | sed -r 's/.$/)/g')"
+
+
+Изведете имената на потребителите, които не са логнати в момента, но имат живи процеси
