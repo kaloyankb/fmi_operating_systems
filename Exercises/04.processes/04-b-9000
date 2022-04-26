@@ -1,0 +1,12 @@
+в .sh файл:
+#!/bin/bash
+ps -eo pid=,ppid= | while read v1 v2; do
+        v3=$(ps -eo ppid= | egrep -wc ${v1})
+        v4=$(ps -eo ppid= | egrep -wc ${v2})
+        if [ ${v3} -gt ${v4} ];then
+                echo "${v1}"
+        fi
+        done
+
+
+Да се отпечатат PID на всички процеси, които имат повече деца от родителския си процес.
